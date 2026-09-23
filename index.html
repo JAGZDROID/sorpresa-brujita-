@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Brujita ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor del fondo mágico (estrellas y partículas) -->
+    <div id="magic-background"></div>
+
+    <!-- Botón de música -->
+    <button id="music-btn" class="glass-btn">
+        <span id="music-icon">🎵 Música</span>
+    </button>
+    <audio id="bg-music" loop>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PANTALLA 1: Inicio Misterioso -->
+    <section id="screen-1" class="screen active">
+        <div class="content">
+            <p id="intro-text-1" class="hidden-text text-xl">Hay algo que quería enseñarte hoy...</p>
+            <p id="intro-text-2" class="hidden-text text-xl mt-2">Pero primero tienes que descubrirlo, <span class="highlight font-title">Brujita ✨</span></p>
+            <button id="btn-enter" class="magic-btn hidden-text mt-4">Entrar ✨</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA 2: Revelación -->
+    <section id="screen-2" class="screen">
+        <div class="content">
+            <h2 id="reveal-text-1" class="hidden-text font-title text-2xl">Hoy no es un día cualquiera...</h2>
+            <p id="reveal-text-2" class="hidden-text mt-2">Hoy cumple años una personita bastante especial.</p>
+            <h1 id="reveal-text-3" class="hidden-text font-title text-3xl highlight mt-3">Feliz cumpleaños, Brujita 🎂✨</h1>
+            <button id="btn-next-quotes" class="magic-btn hidden-text mt-4">Siguiente</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA 3: Frases de amistad -->
+    <section id="screen-3" class="screen">
+        <div class="content card-container">
+            <div id="quote-card" class="glass-card">
+                <p id="quote-text" class="text-lg">...</p>
+            </div>
+            <p class="instruction-text mt-2 text-sm">(Toca para continuar)</p>
+        </div>
+    </section>
+
+    <!-- PANTALLA 4: La sorpresa interactiva (La Luna) -->
+    <section id="screen-4" class="screen">
+        <div class="content">
+            <p id="moon-instruction" class="text-lg mb-4">Toca la luna para un poco de magia...</p>
+            
+            <div id="interactive-moon" class="moon"></div>
+            
+            <div id="moon-message" class="hidden-text mt-4">
+                <p class="text-md italic">"Dicen que las brujitas tienen magia... pero creo que tú tienes más de la que admites. 😂✨"</p>
+            </div>
+            
+            <button id="btn-final" class="magic-btn hidden-text mt-4">Hay una última cosa...</button>
+        </div>
+    </section>
+
+    <!-- PANTALLA 5: Carta Final -->
+    <section id="screen-5" class="screen">
+        <div class="content letter-container">
+            <p id="final-intro" class="mb-3 text-lg font-title"></p>
+            <div id="final-letter" class="glass-card letter hidden-text text-left">
+                <p id="letter-content" class="mb-3"></p>
+                <p class="font-title text-xl highlight text-center">Feliz cumpleaños, Brujita:>. ✨</p>
+                <p class="text-center text-sm mb-3">Disfruta muchísimo tu día.</p>
+                
+                <div class="signature-container mt-4">
+                    <p class="signature text-right">Con cariño,<br><span class="highlight font-title text-xl">ranita ✨</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor para el confeti -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
